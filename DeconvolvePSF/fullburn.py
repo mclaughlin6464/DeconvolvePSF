@@ -38,10 +38,7 @@ for bigdir in iglob(data_dir+ '*/'):
         littledir_last= littledir.split('/')[-2]
         expids.append(int(littledir_last[2:-1]))
 
-print len(expids)
-
-from sys import exit
-exit(0)
+#there are 5861 exposures. 
 
 mkdirPermission = True
 
