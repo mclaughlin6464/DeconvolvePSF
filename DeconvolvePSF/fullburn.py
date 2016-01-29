@@ -35,9 +35,7 @@ data_dir = '/nfs/slac/g/ki/ki18/des/cpd/psfex_catalogs/SVA1_FINALCUT/psfcat/' #D
 expids = []
 for bigdir in iglob(data_dir+ '*/'):
     for littledir in iglob(bigdir+'*/'):
-        for fits_file in iglob(littledir+'_selpsfcat.fits'):
-            split_fits = fits_file.split('/')[-1].split('_')
-            expids.append(int(split_fits[2][2:]))
+        expids.append(int(littledir[2:-1]))
 
 print len(expids)
 
